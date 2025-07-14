@@ -9,8 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
-        script: ['"Great Vibes"', 'cursive'],
+        // Use CSS variable from next/font
+        poppins: ['var(--font-poppins)', 'sans-serif'],
+        script: ['var(--font-great-vibes)', 'cursive'],
       },
     },
   },

@@ -1,17 +1,25 @@
-// app/about/page.tsx
+'use client';
+
+import Image from 'next/image';
 import React from 'react';
+import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from 'react-icons/fa';
 
 export default function AboutPage() {
   return (
     <section className="min-h-screen bg-[#0a0a23] text-white flex items-center justify-center px-6 md:px-12">
       <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between gap-12 py-16">
+        
         {/* Profile Image - RECTANGULAR & Grayscale */}
         <div className="md:w-1/2 flex justify-center md:justify-start">
-          <img
-            src="/FB_IMG_1558170496399.jpg"
-            alt="Profile"
-            className="w-90 h-[42rem] object-cover grayscale shadow-xl"
-          />
+          <div className="relative w-[360px] h-[672px]">
+            <Image
+              src="/FB_IMG_1558170496399.jpg"
+              alt="Profile"
+              fill
+              className="object-cover grayscale shadow-xl rounded"
+              priority
+            />
+          </div>
         </div>
 
         {/* About Content */}
@@ -47,10 +55,10 @@ export default function AboutPage() {
 
           {/* Social Icons */}
           <div className="flex gap-4 mt-8 text-[#4169E1] text-2xl">
-            <a href="#" aria-label="LinkedIn"><i className="fab fa-linkedin"></i></a>
-            <a href="#" aria-label="GitHub"><i className="fab fa-github"></i></a>
-            <a href="#" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
-            <a href="#" aria-label="Email"><i className="fas fa-envelope"></i></a>
+            <a href="#" aria-label="LinkedIn"><FaLinkedin /></a>
+            <a href="#" aria-label="GitHub"><FaGithub /></a>
+            <a href="#" aria-label="Twitter"><FaTwitter /></a>
+            <a href="mailto:nwaforugochukwu21@gmail.com" aria-label="Email"><FaEnvelope /></a>
           </div>
         </div>
       </div>

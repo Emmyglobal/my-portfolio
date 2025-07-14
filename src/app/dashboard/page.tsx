@@ -1,4 +1,3 @@
-// app/dashboard/page.tsx
 export default function UserDashboard() {
   return (
     <section>
@@ -12,7 +11,7 @@ export default function UserDashboard() {
         </div>
         <div className="p-4 border rounded shadow">
           <h2 className="font-semibold mb-2">Order History</h2>
-          <p className="text-gray-600">You haven't made any purchases yet.</p>
+          <p className="text-gray-600">{"You haven't made any purchases yet."}</p>
         </div>
         <div className="p-4 border rounded shadow">
           <h2 className="font-semibold mb-2">Referrals</h2>

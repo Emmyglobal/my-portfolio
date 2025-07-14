@@ -8,8 +8,10 @@ export default function ContactPage() {
         <div>
           <h3 className="uppercase text-sm tracking-widest text-gray-400 mb-2">Get in Touch</h3>
           <h2 className="text-4xl font-bold mb-4">
-            Let's Talk For your <span className="text-[#4169E1]">Next Project(s)</span>
+            {"Let's Talk For your "}
+            <span className="text-[#4169E1]">Next Project(s)</span>
           </h2>
+
           <p className="text-gray-400 mb-6 max-w-md">
             Discuss a project or just want to say hi? Connect with me via email or through a phone call.
           </p>
