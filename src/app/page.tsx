@@ -6,7 +6,7 @@ export default function HomePage() {
     <section className="grid md:grid-cols-2 items-center gap-10 min-h-screen px-6 py-16 bg-gradient-to-br from-white via-indigo-200 to-indigo-400">
       <div>
         <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-4 text-primaryText">
-          Hi, I&apos;m <span className="text-indigo-600 font-semibold">Nwafor Ugochukwu</span>
+          Hi, I&apos;m <span className="text-indigo-600 font-semibold">Nwafor Ugochukwu Emmanuel</span>
         </h1>
         <p className="mb-6 text-xl text-secondaryText">
           Software Engineer • Educator • Consultant
