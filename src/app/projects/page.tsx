@@ -1,4 +1,3 @@
-import { useRef } from "react";
 
 export default function ProjectsPage() {
   // Hover handlers for play/pause
