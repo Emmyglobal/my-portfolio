@@ -1,19 +1,32 @@
 import { ArrowRight, Download } from "lucide-react";
 import Image from "next/image";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import Typed from "react-typed";
 
 export default function HomePage() {
   return (
     <section className="grid md:grid-cols-2 items-center gap-10 min-h-screen px-6 py-16 bg-gradient-to-br from-white via-indigo-200 to-indigo-400">
+      {/* Left Section */}
       <div>
-        <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-4 text-primaryText">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4 text-primaryText">
           Hi, I&apos;m{" "}
           <span className="text-indigo-600 font-semibold">
-            Nwafor Ugochukwu Emmanuel
+            <Typed
+              strings={[
+                "Nwafor Ugochukwu Emmanuel",
+                "a Software Engineer",
+                "an Educator",
+                "a Consultant",
+              ]}
+              typeSpeed={80}
+              backSpeed={40}
+              backDelay={1500}
+              loop
+            />
           </span>
         </h1>
 
-        <p className="mb-6 text-xl text-secondaryText">
+        <p className="mb-6 text-lg sm:text-xl text-secondaryText">
           Software Engineer • Educator • Consultant
         </p>
 
@@ -71,7 +84,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Portrait Image */}
+      {/* Right Image Section */}
       <div className="w-full aspect-square rounded-full overflow-hidden border-8 border-indigo-600 shadow-lg relative">
         <Image
           src="/FB_IMG_1558170496399.jpg"

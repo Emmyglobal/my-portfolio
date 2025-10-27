@@ -60,11 +60,12 @@ export default function Sidebar() {
 
       {/* Sidebar */}
       <aside
-        className={`fixed top-0 left-0 h-screen w-64 bg-[#0a0a23] text-white p-6 shadow-lg z-40 flex flex-col justify-between transition-transform transform ${
+          className={`fixed top-0 left-0 h-screen w-64 bg-[#0a0a23] text-white p-6 shadow-lg z-40 flex flex-col overflow-y-auto transition-transform transform ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div>
+        {/* Top Section */}
+        <div className="flex-1">
           {/* Logo */}
           <div className="mb-10 font-poppins text-white font-extrabold text-2xl tracking-wide pt-12">
             <span className="text-[#4169E1]">U</span>gochukwu
@@ -141,8 +142,8 @@ export default function Sidebar() {
           </div>
         </div>
 
-        {/* Footer */}
-        <div className="text-xs text-gray-400 mt-10 border-t border-gray-700 pt-4">
+        {/* Footer - always visible but scrolls with content */}
+        <div className="text-xs text-gray-400 mt-8 border-t border-gray-700 pt-4">
           <p className="mb-1">
             &copy; {new Date().getFullYear()}{" "}
             <span className="text-[#4169E1]">Nwafor Ugochukwu</span>
