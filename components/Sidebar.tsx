@@ -12,7 +12,14 @@ import {
   Mail,
 } from "lucide-react";
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaFacebook,
+  FaInstagram,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 const links = [
   { name: "Home", href: "/", icon: <Home className="w-4 h-4 mr-2" /> },
@@ -39,7 +46,8 @@ export default function Sidebar() {
       {/* Top bar toggle always visible */}
       <div className="fixed top-0 left-0 w-full flex items-center justify-between bg-[#0a0a23] text-white px-4 py-3 z-50 shadow">
         <span className="text-2xl font-script tracking-wide text-white">
-            <span className="text-[#4169E1]">N</span>wafor <span className="text-[#4169E1]">U</span>gochukwu
+          <span className="text-[#4169E1]">N</span>wafor{" "}
+          <span className="text-[#4169E1]">U</span>gochukwu
         </span>
 
         <button
@@ -87,31 +95,58 @@ export default function Sidebar() {
           </nav>
 
           {/* Social Links */}
-          <div className="mt-10 flex gap-3">
+          <div className="mt-10 flex flex-wrap gap-3">
             <a
-              href="#"
+              href="https://github.com/Emmyglobal"
+              target="_blank"
               className="w-9 h-9 flex items-center justify-center bg-[#1a1a2e] rounded-full hover:bg-[#4169E1] transition"
             >
               <FaGithub />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/nwafor-ugochukwu-54626b142/"
+              target="_blank"
               className="w-9 h-9 flex items-center justify-center bg-[#1a1a2e] rounded-full hover:bg-[#4169E1] transition"
             >
               <FaLinkedin />
             </a>
             <a
-              href="#"
+              href="https://x.com/nwaforugochukw"
+              target="_blank"
               className="w-9 h-9 flex items-center justify-center bg-[#1a1a2e] rounded-full hover:bg-[#4169E1] transition"
             >
               <FaTwitter />
             </a>
+            <a
+              href="https://www.facebook.com/NwaforUgochukwuEmmanuel"
+              target="_blank"
+              className="w-9 h-9 flex items-center justify-center bg-[#1a1a2e] rounded-full hover:bg-[#4169E1] transition"
+            >
+              <FaFacebook />
+            </a>
+            <a
+              href="https://www.instagram.com/nwaforugochukw"
+              target="_blank"
+              className="w-9 h-9 flex items-center justify-center bg-[#1a1a2e] rounded-full hover:bg-[#4169E1] transition"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://wa.me/2347031992338"
+              target="_blank"
+              className="w-9 h-9 flex items-center justify-center bg-[#1a1a2e] rounded-full hover:bg-[#25D366] transition"
+            >
+              <FaWhatsapp />
+            </a>
           </div>
         </div>
 
-        {/* Rich Footer */}
+        {/* Footer */}
         <div className="text-xs text-gray-400 mt-10 border-t border-gray-700 pt-4">
-          <p className="mb-1">&copy; {new Date().getFullYear()} <span className="text-[#4169E1]">Nwafor Ugochukwu</span></p>
+          <p className="mb-1">
+            &copy; {new Date().getFullYear()}{" "}
+            <span className="text-[#4169E1]">Nwafor Ugochukwu</span>
+          </p>
           <p className="mb-1">Empowering brands through technology.</p>
           <p className="mb-1">Made with 💙 in Nigeria</p>
         </div>

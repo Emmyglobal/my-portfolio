@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaPaperPlane } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaPaperPlane, FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -68,6 +68,27 @@ export default function ContactPage() {
             <a href="https://www.linkedin.com/in/nwafor-ugochukwu-54626b142/" className="w-10 h-10 flex items-center justify-center bg-[#1a1a2e] rounded-full hover:bg-[#4169E1] transition"><FaLinkedin /></a>
             <a href="https://x.com/nwaforugochukw" className="w-10 h-10 flex items-center justify-center bg-[#1a1a2e] rounded-full hover:bg-[#4169E1] transition"><FaTwitter /></a>
             <a href="mailto:nwaforugochukwu21@gmail.com" className="w-10 h-10 flex items-center justify-center bg-[#1a1a2e] rounded-full hover:bg-[#4169E1] transition"><FaEnvelope /></a>
+            <a
+              href="https://www.facebook.com/NwaforUgochukwuEmmanuel"
+              target="_blank"
+              className="w-9 h-9 flex items-center justify-center bg-[#1a1a2e] rounded-full hover:bg-[#4169E1] transition"
+            >
+              <FaFacebook />
+            </a>
+            <a
+              href="https://www.instagram.com/nwaforugochukw"
+              target="_blank"
+              className="w-9 h-9 flex items-center justify-center bg-[#1a1a2e] rounded-full hover:bg-[#4169E1] transition"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://wa.me/2347031992338"
+              target="_blank"
+              className="w-9 h-9 flex items-center justify-center bg-[#1a1a2e] rounded-full hover:bg-[#25D366] transition"
+            >
+              <FaWhatsapp />
+            </a>
           </div>
         </div>
 
