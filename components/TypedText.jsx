@@ -1,8 +1,10 @@
 "use client";
 import React from "react";
-import Typed from "react-typed";
+import Typed from "react-typed"; // ✅ Default import — not { Typed }
 
 export default function TypedText() {
+  if (!Typed) return null; // ✅ Prevent "undefined" crashes
+
   return (
     <Typed
       strings={[
