@@ -26,6 +26,9 @@ export const metadata = {
   title: "Nwafor Ugochukwu | Software Engineer & Educator",
   description:
     "Portfolio and educational platform of Nwafor Ugochukwu – Fullstack Developer & Educator.",
+  icons: {
+  icon: "/favicon.ico", // Path inside /public folder
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

@@ -1,7 +1,7 @@
 import { ArrowRight, Download } from "lucide-react";
 import Image from "next/image";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
-import Typed from "react-typed";
+import { Typed } from "react-typed";
 
 export default function HomePage() {
   return (
