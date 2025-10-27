@@ -1,9 +1,22 @@
 "use client";
-import React from "react";
-import Typed from "react-typed"; // ✅ Default import — not { Typed }
+import React, { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
+
+// ✅ Load react-typed only on client, no SSR
+const Typed = dynamic(() => import("react-typed"), { ssr: false });
 
 export default function TypedText() {
-  if (!Typed) return null; // ✅ Prevent "undefined" crashes
+  const [isClient, setIsClient] = useState(false);
+
+  // Ensures component runs only on the client after mount
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    // fallback to static text during SSR
+    return <span>Nwafor Ugochukwu Emmanuel</span>;
+  }
 
   return (
     <Typed
@@ -13,10 +26,12 @@ export default function TypedText() {
         "an Educator",
         "a Consultant",
       ]}
-      typeSpeed={80}
+      typeSpeed={70}
       backSpeed={40}
       backDelay={1500}
       loop
+      showCursor={true}
+      cursorChar="|"
     />
   );
 }
