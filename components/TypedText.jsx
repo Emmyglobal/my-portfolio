@@ -1,20 +1,18 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import dynamic from "next/dynamic";
-
-// ✅ Load react-typed only on client, no SSR
-const Typed = dynamic(() => import("react-typed"), { ssr: false });
 
 export default function TypedText() {
-  const [isClient, setIsClient] = useState(false);
+  const [Typed, setTyped] = useState(null);
 
-  // Ensures component runs only on the client after mount
   useEffect(() => {
-    setIsClient(true);
+    // Load react-typed only in browser
+    import("react-typed")
+      .then((mod) => setTyped(() => mod.default))
+      .catch((err) => console.error("Failed to load react-typed:", err));
   }, []);
 
-  if (!isClient) {
-    // fallback to static text during SSR
+  if (!Typed) {
+    // ✅ Fallback text while loading (prevents blank H1)
     return <span>Nwafor Ugochukwu Emmanuel</span>;
   }
 
@@ -30,7 +28,7 @@ export default function TypedText() {
       backSpeed={40}
       backDelay={1500}
       loop
-      showCursor={true}
+      showCursor
       cursorChar="|"
     />
   );
