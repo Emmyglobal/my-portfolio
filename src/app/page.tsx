@@ -1,10 +1,7 @@
 import { ArrowRight, Download } from "lucide-react";
 import Image from "next/image";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
-import dynamic from "next/dynamic";
-
-// ✅ Proper dynamic import syntax
-const Typed = dynamic(() => import("react-typed"), { ssr: false });
+import TypedText from "../../components/TypedText";
 
 
 export default function HomePage() {
@@ -14,20 +11,10 @@ export default function HomePage() {
       <div>
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4 text-primaryText">
           Hi, I&apos;m{" "}
-          <span className="text-indigo-600 font-semibold">
-            <Typed
-              strings={[
-                "Nwafor Ugochukwu Emmanuel",
-                "a Software Engineer",
-                "an Educator",
-                "a Consultant",
-              ]}
-              typeSpeed={80}
-              backSpeed={40}
-              backDelay={1500}
-              loop
-            />
-          </span>
+        <span className="text-indigo-600 font-semibold">
+          <TypedText />
+        </span>
+
         </h1>
 
         <p className="mb-6 text-lg sm:text-xl text-secondaryText">
