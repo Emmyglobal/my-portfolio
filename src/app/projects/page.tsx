@@ -1,4 +1,4 @@
-
+"use client";
 export default function ProjectsPage() {
   // Hover handlers for play/pause
   const handleMouseEnter = (event) => {
