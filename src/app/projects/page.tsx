@@ -1,12 +1,14 @@
 "use client";
+import type { MouseEvent } from "react";
 export default function ProjectsPage() {
   // Hover handlers for play/pause
-  const handleMouseEnter = (event) => {
+  const handleMouseEnter = (event: MouseEvent<HTMLVideoElement>) => {
     const video = event.currentTarget;
-    video.play();
+    // play() returns a promise in some browsers; ignoring return here is fine for hover UX
+    void video.play();
   };
 
-  const handleMouseLeave = (event) => {
+  const handleMouseLeave = (event: MouseEvent<HTMLVideoElement>) => {
     const video = event.currentTarget;
     video.pause();
     video.currentTime = 0;
