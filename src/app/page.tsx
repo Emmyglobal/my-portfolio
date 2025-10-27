@@ -2,10 +2,10 @@ import { ArrowRight, Download } from "lucide-react";
 import Image from "next/image";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import dynamic from "next/dynamic";
-const Typed = dynamic(
-  () => import("react-typed").then((mod) => mod.Typed),
-  { ssr: false }
-);
+
+// ✅ Proper dynamic import syntax
+const Typed = dynamic(() => import("react-typed"), { ssr: false });
+
 
 export default function HomePage() {
   return (
